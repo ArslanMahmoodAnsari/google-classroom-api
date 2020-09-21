@@ -24,7 +24,7 @@ function Home({history}){
   useEffect(() => {
     let temp = localStorage.getItem('courses') ? JSON.parse(localStorage.getItem('courses')) : null
     let url = decodeURIComponent(window.location.href)
-    const token = url.slice(32,121)
+    const token = url.slice(url.indexOf('=') + 1 ,url.indexOf('&'))
     if(temp){
       setLoading(false)
       setCourses(temp)
