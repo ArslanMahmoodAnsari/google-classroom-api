@@ -10,7 +10,7 @@ function Main() {
         "Content-Type": "application/json",
       },
     };
-    const res = await axios.get('http://localhost:3000/api/auth', config)
+    const res = await axios.get('/api/auth', config)
     window.location.href = res.data.authUrl
   }
   return (

@@ -15,7 +15,7 @@ function Home({history}){
     const body = {
       code: token
     }
-    const res = await axios.post('http://localhost:3000/api/classroom/courses',body ,config)
+    const res = await axios.post('/api/classroom/courses',body ,config)
     setLoading(false)
     setCourses(res.data.courses)
     localStorage.setItem('courses', JSON.stringify(res.data.courses))
