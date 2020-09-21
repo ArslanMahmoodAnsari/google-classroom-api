@@ -111,6 +111,9 @@ router.post('/classroom/courses', async (req, res) =>{
     const courses = await listCourses(authClient);
     return res.send({ courses })
   } catch (error) {
+    console.log('====================================');
+    console.log(error);
+    console.log('====================================');
     return res.status(500).send(error)  
   }
 });
