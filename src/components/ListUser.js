@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Fragment } from "react"
+import '../App.css'
 
 function ListUser ({location}) {
 	const [course, setCourse] = useState(null)
@@ -10,39 +11,40 @@ function ListUser ({location}) {
 	const showCourse = () => {
 		return(
 			<Fragment>
-			<h1>{course.name}</h1>
-			<table>
-				<tr>
-					<thead>
-						teachers
-					</thead>
-				</tr>
-				{
-					course.people.teachers.map(teacher => {
-					return(<tr key={teacher.profile.id}>
-						<tbody>
-							{teacher.profile.name.givenName}
-						</tbody>
-					</tr>)
-					})
-				}	
-			</table>
-			<table>
-				<tr>
-					<thead>
-						Students
-					</thead>
-				</tr>
-				{
-					course.people.students.map(student => {
-					return(<tr key={student.profile.id}>
-						<tbody>
-							{student.profile.name.givenName}
-						</tbody>
-					</tr>)
-					})
-				}	
-			</table>
+				<h1 className='UserListHeader'>{course.name}</h1>
+				<div className='TabularData'>
+					<table className='TableList'>
+							<thead className='TableListHeader'>
+								<tr>
+										<th>Teachers</th>
+								</tr>
+							</thead>
+						{course.people.teachers.map(teacher => {
+							return(
+								<tbody key={teacher.profile.id}>
+									<tr>
+										<td>	{teacher.profile.name.givenName}</td>
+									</tr>
+								</tbody>
+							)
+							})}	
+					</table>
+					<table className='TableList'>
+						<thead className='TableListHeader'>
+								<tr>
+										<th>Students</th>
+								</tr>
+							</thead>
+						{course.people.students.map(student => {
+							return(
+								<tbody key={student.profile.id}>
+								<tr>
+									<td>	{student.profile.name.givenName}</td>
+								</tr>
+							</tbody>)
+							})}	
+					</table>
+				</div>
 			</Fragment>
 		)
 	}

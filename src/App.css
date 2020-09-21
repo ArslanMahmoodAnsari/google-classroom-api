@@ -9,15 +9,56 @@
 .Button {
   background-color: transparent;
   border: 1px solid black;
-  color: #5C9210;
+  color: cadetblue;
   outline: none;
   cursor: pointer;
   font: inherit;
   padding: 10px;
   margin: 10px;
   font-weight: bold;
+  border-radius: 30px;
+}
+.ButtonParent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+.UserListHeader{
+  text-align: center;
+  margin: 40px 0px;
+}
+
+.TableList{
+  border: 1px solid #ddd;
+  text-align: center;
+  border-collapse: collapse;
+  width: 40%;
+  display: table;
+  border-color: grey;
+  margin: 0 auto;
+  -webkit-box-shadow: 5px 5px 20px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 20px -3px rgba(0,0,0,0.75);
+box-shadow: 5px 5px 20px -3px rgba(0,0,0,0.75);
+}
+tr{
+  border: 1px solid #ccc;
+  padding: 10px 0px;
+  height: 40px;
+}
+.TableListHeader{
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  text-transform: uppercase;
+}
+.TabularData{
+  display: flex;
+}
+td{
+  font-size: 14px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -57,7 +98,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: cadetblue;
   color: white;
 }
 

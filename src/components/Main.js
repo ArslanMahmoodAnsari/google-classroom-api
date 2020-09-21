@@ -14,11 +14,13 @@ function Main() {
     window.location.href = res.data.authUrl
   }
   return (
+    <div className='ButtonParent'>
       <button
       className="Button"
       onClick={getAuthModal}>
         Google login
       </button>
+    </div>
   )
 }
 

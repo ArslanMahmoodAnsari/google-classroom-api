@@ -35,16 +35,13 @@ function Home({history}){
   }, [])
   
   useEffect(() => {
-    console.log('====================================');
-    console.log(courses);
-    console.log('====================================');
   }, [JSON.stringify(courses)])
   const showCourses = () => {
     return(
       <table className='table'>
         <tr>
           <th>Course</th>
-          <th>teachers</th>
+          <th>Teachers</th>
           <th>Students</th>
         </tr>
         {courses.map(course => (
